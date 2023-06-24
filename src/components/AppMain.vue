@@ -95,8 +95,10 @@ export default {
     
     <div class="black-bg">
         <div class="container">
-            <div class="row flex" v-for="(card, index) in cards" :key="index">
-                <AppCards class="col" :image="card.thumb" :title="card.series"/>
+            <div class="row flex" >
+                <div class="col" v-for="(card, index) in cards" :key="index">
+                    <AppCards :image="card.thumb" :title="card.series"/>
+                </div>
             </div>
         </div>
     </div>
@@ -131,8 +133,10 @@ export default {
         padding: 2em 0;
         .container{
             align-items: center;
+            width: 100%;
             .row{
                 width: 100%;
+                flex-wrap: wrap;
                 .col{
                     width: calc(100% / 6 - 40px);
                     margin: 20px;
