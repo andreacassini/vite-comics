@@ -65,19 +65,22 @@ export default {
 
 <style lang="scss" scoped>
     @use '../styles/generals.scss' as *;
+    @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap');
     .container{
         display: flex;
         justify-content: space-between;
         align-items: center;
-        
+        padding: 1em;
     }
     li{
         display: inline;
-        padding: 3.5em 0.8em;
+        padding: 3.6em 0.8em;
         a{
             text-decoration: none;
-            color: black;
             font-size: 14px;
+            font-weight: bold;
+            font-family: 'Oswald', sans-serif;
+            color: rgb(71, 71, 71);
         }
     }
 </style>
