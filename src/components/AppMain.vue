@@ -94,12 +94,13 @@ export default {
     </div>
     
     <div class="black-bg">
-        <div class="container">
+        <div class="container flex">
             <div class="row flex" >
                 <div class="col" v-for="(card, index) in cards" :key="index">
                     <AppCards :image="card.thumb" :title="card.series"/>
                 </div>
             </div>
+            <button>LOAD MORE</button>
         </div>
     </div>
 </template>
@@ -130,10 +131,11 @@ export default {
     .black-bg{
         background-color: #222222;
         color: white;
-        padding: 2em 0;
+        padding: 1em 0;
         .container{
             align-items: center;
             width: 100%;
+            flex-direction: column;
             .row{
                 width: 100%;
                 flex-wrap: wrap;
@@ -141,6 +143,15 @@ export default {
                     width: calc(100% / 6 - 40px);
                     margin: 20px;
                 }
+            }
+            button{
+                cursor: pointer;
+                background-color: #0282F9;
+                color: white;
+                padding: 0.5em 3em;
+                font-family: 'Oswald', sans-serif;
+                border: none;
+                margin-top: 2em;
             }
         }
     }
