@@ -54,8 +54,8 @@ export default {
     <div class="container">    
         <a href="#"><img src="../assets/dc-logo.png" alt="logo"></a>
         <ul>
-            <li v-for="(cat, index) in menu" :key="index">
-                <a href="#">
+            <li v-for="(cat, index) in menu" :key="index" >
+                <a href="#" :class="cat.active ? 'active' : ' ' ">
                     {{ cat.cat }}
                 </a>
             </li>
@@ -74,13 +74,18 @@ export default {
     }
     li{
         display: inline;
-        padding: 3.6em 0.8em;
+        
         a{
             text-decoration: none;
             font-size: 14px;
             font-weight: bold;
             font-family: 'Oswald', sans-serif;
             color: rgb(71, 71, 71);
+            padding: 4em 0.8em;
         }
+    }
+    .active{
+        color: #0282F9;
+        border-bottom: 4px solid #0282F9
     }
 </style>
