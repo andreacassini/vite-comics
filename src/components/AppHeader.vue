@@ -52,7 +52,7 @@ export default {
 
 <template>
     <div class="container">    
-        <img src="../assets/dc-logo.png" alt="logo">
+        <a href="#"><img src="../assets/dc-logo.png" alt="logo"></a>
         <ul>
             <li v-for="(cat, index) in menu" :key="index">
                 <a href="#">
